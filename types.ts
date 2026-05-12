@@ -1,37 +1,42 @@
-export interface VenueRequest {
+export type VenueType =
+  | 'bar'
+  | 'restaurant'
+  | 'cafe'
+  | 'hotel'
+  | 'club'
+  | 'bistro'
+  | 'patisserie'
+  | 'fast-food';
+
+export interface VenueInput {
   name: string;
   city: string;
+  venueType: VenueType;
 }
 
-export interface AnalysisState {
-  status: 'idle' | 'analyzing' | 'complete' | 'error';
-  data: string | null;
-  error: string | null;
-}
-
-export enum AnalysisStep {
-  Audit = 'AUDIT',
-  Competition = 'COMPETITION',
-  DeepDive = 'DEEP_DIVE',
-  Benchmarking = 'BENCHMARKING',
-  SWOT = 'SWOT',
-  Recommendations = 'RECOMMENDATIONS'
-}
-
-export const STEPS_ORDER = [
-  AnalysisStep.Audit,
-  AnalysisStep.Competition,
-  AnalysisStep.DeepDive,
-  AnalysisStep.Benchmarking,
-  AnalysisStep.SWOT,
-  AnalysisStep.Recommendations
-];
-
-export const STEP_LABELS: Record<AnalysisStep, string> = {
-  [AnalysisStep.Audit]: '1. Verificare Locație & Reputație',
-  [AnalysisStep.Competition]: '2. Concurența Reală (Zonă Verificată)',
-  [AnalysisStep.DeepDive]: '3. Analiză Deep Dive',
-  [AnalysisStep.Benchmarking]: '4. Global Benchmarking',
-  [AnalysisStep.SWOT]: '5. Sinteză Strategică & SWOT',
-  [AnalysisStep.Recommendations]: '6. Strategie de Atac & Promovare',
+export const VENUE_TYPE_LABELS: Record<VenueType, string> = {
+  bar: 'Bar / Pub',
+  restaurant: 'Restaurant',
+  cafe: 'Cafenea / Coffee Shop',
+  hotel: 'Hotel',
+  club: 'Club / Lounge',
+  bistro: 'Bistro',
+  patisserie: 'Cofetărie / Patiserie',
+  'fast-food': 'Fast-Food / QSR',
 };
+
+export type ModuleStatus = 'idle' | 'streaming' | 'complete' | 'error';
+
+export interface GroundingSource {
+  uri: string;
+  title: string;
+}
+
+export interface ModuleState {
+  status: ModuleStatus;
+  text: string;
+  sources: GroundingSource[];
+  error: string | null;
+  startedAt: number | null;
+  finishedAt: number | null;
+}
