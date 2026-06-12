@@ -1,0 +1,22 @@
+{
+  "_comment": "Profil de brand EXEMPLU. Când un client îți dă identitatea, copiază-l ca profiles/<slug>.json și completează. La o livrare viitoare pentru același client, skill-ul îl încarcă și sare peste întrebările de branding.",
+  "client": "Nordic Coffee Co.",
+  "slug": "nordic-coffee",
+  "brand": {
+    "name": "Nordic Coffee",
+    "logoText": "Nordic Coffee",
+    "logoImage": null,
+    "colorBrand": "#2563eb",
+    "colorBrand2": "#0ea5e9",
+    "font": "Inter, ui-sans-serif, system-ui, sans-serif"
+  },
+  "defaults": {
+    "deliveryMode": "B",
+    "language": "ro",
+    "source": "Meta Ads · Google Ads · TikTok · Klaviyo",
+    "northStar": ["revenue", "roas"],
+    "channels": ["Meta", "Google", "TikTok", "Email"],
+    "whiteLabel": false
+  },
+  "notes": "deliveryMode: A = Paul prezintă · B = client intern · C = white-label cu clienții lor."
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ro"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>LLM Council R2 — dashboard-architect</title>
+<style>
+ :root{--ink:#0f172a;--muted:#64748b;--bg:#f6f8fb;--surface:#fff;--line:#e7ecf3;--brand:#2563eb;--pos:#059669;--warn:#d97706;--font:"Inter",ui-sans-serif,system-ui,-apple-system,Arial,sans-serif}
+ *{box-sizing:border-box}body{margin:0;font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.5}
+ .wrap{max-width:900px;margin:0 auto;padding:28px 20px 60px}
+ h1{font-size:21px;margin:0 0 4px;letter-spacing:-.02em}.sub{color:var(--muted);font-size:13px;margin-bottom:20px}
+ .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 8px 24px rgba(15,23,42,.05);padding:6px 20px 16px;margin-bottom:18px}
+ h2{font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--brand);margin:18px 0 7px;border-bottom:1px solid var(--line);padding-bottom:5px}
+ ol,ul{margin:0;padding-left:20px}li{margin:7px 0;font-size:14px}
+ .first{background:linear-gradient(135deg,#2563eb,#0ea5e9);color:#fff;border-radius:12px;padding:15px 18px;margin-top:16px}
+ .first .lab{font-size:11px;text-transform:uppercase;letter-spacing:.07em;opacity:.85}.first .big{font-size:15.5px;font-weight:600;margin-top:4px}
+ table{width:100%;border-collapse:collapse;font-size:13px;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:6px 0 18px}
+ th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{background:#f1f5fb;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+ tr:last-child td{border-bottom:none}
+ .pill{display:inline-block;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:999px}
+ .fix{background:color-mix(in srgb,var(--pos) 14%,transparent);color:var(--pos)}.warn{background:color-mix(in srgb,var(--warn) 16%,transparent);color:var(--warn)}
+ code{background:#eef2f7;padding:1px 5px;border-radius:5px;font-size:12.5px}
+ footer{margin-top:26px;border-top:1px solid var(--line);padding-top:13px;color:var(--muted);font-size:12px}
+</style></head><body><div class="wrap">
+
+ <h1>🏛️ LLM Council — Verdict (Runda 2)</h1>
+ <div class="sub">Re-council pe designul <b>hardened</b> · testează dacă fix-urile rundei 1 țin · 2026-06-05 18:29</div>
+
+ <div class="card">
+  <h2>Verdictul scurt</h2>
+  <p style="font-size:14.5px;margin:8px 0 0">Designul e <b>fundamental corect</b>, dar runda 1 a <b>supra-corectat</b> și a strecurat <b>teatru de verificare</b>. Corecția rundei 2: <b>nu mai multe porți — UNA bună, ancorată la sursă, restul tăcut</b>, plus un strat de încredere care lipsea. <span class="pill warn">încă nu „gata de client" până nu măsori rata reală de eroare</span></p>
+
+  <h2>Unde converge consiliul</h2>
+  <ol>
+   <li><b>Gate-ul din runda 1 e insuficient</b> — un <i>ecou</i> al cifrei citite confirmă propria halucinație a modelului (<code>2,3</code> citit ca <code>23</code> → omul dă „da" orb). Trebuie <b>ancorat la sursă</b> + confirmare activă pe 2–3 KPI critice.</li>
+   <li><b>Self-check-ul matematic = parțial teatru</b> — prinde inconsistența aritmetică, nu corespondența cu realitatea (<code>47</code> vs <code>74</code> trec amândouă). Păstrat, dar <b>tăcut</b>, fără falsă siguranță.</li>
+   <li><b>Am supra-corectat (unanim)</b> — 5 opriri = interogatoriu; omul cu 3 minute abandonează. Comasează, lasă <b>o singură oprire</b>.</li>
+   <li><b>Demo-first</b> — arată exemplul gata ÎNTÂI (2 min, fără întrebări), apoi ia datele.</li>
+   <li><b>Mobil = garanție automată</b>, nu pas de user.</li>
+  </ol>
+
+  <h2>Tensiunea cheie — acuratețe vs. încredere</h2>
+  <p style="font-size:14px;margin:6px 0 0">Prim-Principii: livrabilul real e <b>încrederea</b> (non-rușinea); de râs te face ezitarea, nu eroarea → dă o „frază de apărare". Contrarian + reviewers: o cifră greșită TOT te face de râs, mai târziu → acuratețea e fundația. <b>Rezoluție:</b> ambele, pe straturi diferite — garantează acuratețea cât mai TĂCUT ȘI adaugă un strat subțire de încredere (2–3 puncte de vorbit).</p>
+
+  <h2>Blind spots prinse la peer review</h2>
+  <ul>
+   <li>Fix-ul e <b>arhitectural</b> (extragere structurată + corecție zero-effort), nu „self-check" în limbaj.</li>
+   <li><b>Măsoară</b> rata de eroare reală pe N screenshot-uri înainte de a-l folosi live.</li>
+   <li><b>Al doilea eșec tăcut:</b> insight halucinat la output (cifre corecte, concluzie inventată) → regulă de onestitate a narativului.</li>
+   <li><b>Safeguards pe mod:</b> Modul C (clientul → clienții lui, fără expert în buclă) = ancorare + disclaimere maxime.</li>
+  </ul>
+
+  <div class="first"><div class="lab">★ Singurul lucru de făcut primul</div>
+   <div class="big">MĂSOARĂ, apoi reproiectează gate-ul: dă skill-ul orb pe 3–5 screenshot-uri reale și numără câte cifre ies greșit (dashboard vs poză). Rata aia îți spune cât de tare să ancorezi gate-ul.</div></div>
+ </div>
+
+ <div class="card">
+  <h2>Ce am schimbat deja în skill (aplicat din runda 2)</h2>
+  <table>
+   <tr><th>Corecție</th><th>Status</th></tr>
+   <tr><td>Gate-ul ancorat la sursă (cifră + de unde vine; re-confirmare activă pe 2–3 KPI critice), nu un ecou</td><td><span class="pill fix">aplicat</span></td></tr>
+   <tr><td>O singură oprire vizibilă; restul verificărilor — tăcute, în fundal</td><td><span class="pill fix">aplicat</span></td></tr>
+   <tr><td>Demo-first + comasarea listei „ce cifre" cu exemplele de pornire</td><td><span class="pill fix">aplicat</span></td></tr>
+   <tr><td>Self-check tăcut, niciodată „am verificat, deci e corect" (plasă, nu garanție)</td><td><span class="pill fix">aplicat</span></td></tr>
+   <tr><td>Onestitatea narativului — fiecare insight se leagă de o cifră (al 2-lea eșec tăcut)</td><td><span class="pill fix">aplicat</span></td></tr>
+   <tr><td>Strat de încredere: 2–3 „puncte de vorbit" pentru prezentator</td><td><span class="pill fix">aplicat</span></td></tr>
+   <tr><td>Safeguards pe mod de livrare (Modul C = cel mai strict)</td><td><span class="pill fix">aplicat</span></td></tr>
+   <tr><td>Disclaimer „⚠ DRAFT — verifică înainte de trimitere" în template (cât e SAMPLE)</td><td><span class="pill fix">aplicat + testat</span></td></tr>
+   <tr><td>Testul empiric pe screenshot-uri reale (rata de eroare)</td><td><span class="pill warn">de făcut: Paul</span></td></tr>
+  </table>
+ </div>
+
+ <footer>Generat de <b>llm-council</b> · runda 2 · transcript: <code>council-transcript-20260605-1829-r2.md</code> · skill: <code>~/.claude/skills/dashboard-architect/</code></footer>
+</div></body></html>

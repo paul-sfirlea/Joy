@@ -1,0 +1,24 @@
+{
+  "_comment": "Free Supermemory index config. enabled:true to index a root, then REFRESH (node scripts/build-index.mjs). V2/OLD vaults stay OFF (duplicates poison recall). 'Vaults' is in excludeDirs so the work-files root does not re-index the Obsidian vault.",
+  "roots": [
+    { "label": "Second Brain V3", "path": "/Users/Sfirlea/Documents/NEW LAPTOP/Vaults/Paul's Second Brain V3", "enabled": true },
+    { "label": "Laptop — Work Files", "path": "/Users/Sfirlea/Documents/NEW LAPTOP", "enabled": true },
+    { "label": "Desktop", "path": "/Users/Sfirlea/Desktop", "enabled": true },
+    { "label": "ChatGPT & Claude chats", "path": "/Users/Sfirlea/.claude/skills/supermemory/data/chats", "enabled": true },
+    { "label": "Apple Notes", "path": "/Users/Sfirlea/.claude/skills/supermemory/data/apple-notes", "enabled": true },
+    { "label": "Converted (file→md)", "path": "/Users/Sfirlea/.claude/skills/supermemory/data/converted", "enabled": true },
+    { "label": "Google Drive (ingested)", "path": "/Users/Sfirlea/.claude/skills/supermemory/data/drive", "enabled": true },
+    { "label": "Yahoo Mail", "path": "/Users/Sfirlea/.claude/skills/supermemory/data/yahoo", "enabled": true },
+    { "label": "Wispr Flow (dictări)", "path": "/Users/Sfirlea/.claude/skills/supermemory/data/wispr", "enabled": true },
+    { "label": "TwinMind (call-uri)", "path": "/Users/Sfirlea/.claude/skills/supermemory/data/twinmind", "enabled": true },
+    { "label": "Downloads", "path": "/Users/Sfirlea/Downloads", "enabled": false },
+    { "label": "AI Hacker Pro", "path": "/Users/Sfirlea/Documents/NEW LAPTOP/Vaults/aihacker-pro", "enabled": false },
+    { "label": "Second Brain V2 (deprecated)", "path": "/Users/Sfirlea/Documents/NEW LAPTOP/Vaults/Paul's Second Brain V2", "enabled": false },
+    { "label": "Second Brain OLD (do not edit)", "path": "/Users/Sfirlea/Documents/NEW LAPTOP/Vaults/Paul's Second Brain OLD_SOURCE_DO_NOT_EDIT", "enabled": false }
+  ],
+  "extensions": {
+    "full": [".md", ".markdown", ".txt"],
+    "listOnly": [".pdf", ".docx", ".doc", ".pptx", ".ppt", ".key", ".pages", ".numbers", ".xlsx", ".xls", ".csv", ".rtf"]
+  },
+  "excludeDirs": [".obsidian", ".claude", ".claudian", ".git", "node_modules", ".trash", "_attachments", "Vaults", "Library", ".Trash", "DerivedData", ".cache", ".npm", "Photos Library.photoslibrary", ".venv", "venv", "dist", "build", ".next"]
+}

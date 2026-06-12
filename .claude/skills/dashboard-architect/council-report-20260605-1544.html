@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LLM Council — dashboard-architect</title>
+<style>
+  :root{--ink:#0f172a;--muted:#64748b;--bg:#f6f8fb;--surface:#fff;--line:#e7ecf3;
+        --brand:#2563eb;--pos:#059669;--warn:#d97706;--neg:#dc2626;
+        --font:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;}
+  *{box-sizing:border-box}body{margin:0;font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.5}
+  .wrap{max-width:960px;margin:0 auto;padding:28px 20px 60px}
+  h1{font-size:22px;letter-spacing:-.02em;margin:0 0 4px}
+  .sub{color:var(--muted);font-size:13.5px;margin-bottom:20px}
+  .q{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--brand);
+     border-radius:12px;padding:14px 16px;font-size:14px;margin-bottom:22px}
+  .q b{color:var(--brand);text-transform:uppercase;letter-spacing:.05em;font-size:11px}
+  .verdict{background:var(--surface);border:1px solid var(--line);border-radius:16px;
+           box-shadow:0 8px 24px rgba(15,23,42,.06);padding:8px 22px 18px;margin-bottom:24px}
+  .verdict h2{font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:var(--brand);
+              margin:20px 0 8px;border-bottom:1px solid var(--line);padding-bottom:6px}
+  .verdict ol,.verdict ul{margin:0;padding-left:20px}.verdict li{margin:7px 0;font-size:14.5px}
+  .first{background:linear-gradient(135deg,#2563eb,#0ea5e9);color:#fff;border-radius:12px;
+         padding:16px 18px;margin-top:18px}
+  .first .lab{font-size:11px;text-transform:uppercase;letter-spacing:.07em;opacity:.85}
+  .first .big{font-size:16px;font-weight:600;margin-top:4px}
+  .grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:22px 0}
+  .adv{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px}
+  .adv .name{font-weight:700;font-size:13px}.adv .take{font-size:12px;color:var(--muted);margin-top:4px}
+  .adv .star{font-size:10px;color:var(--pos);font-weight:700;margin-top:6px}
+  .axes{width:100%;border-collapse:collapse;margin:8px 0 22px;font-size:13px;background:var(--surface);
+        border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .axes th,.axes td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+  .axes th{background:#f1f5fb;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .axes tr:last-child td{border-bottom:none}
+  .pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px}
+  .agree{background:color-mix(in srgb,var(--pos) 14%,transparent);color:var(--pos)}
+  .clash{background:color-mix(in srgb,var(--warn) 16%,transparent);color:var(--warn)}
+  details{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:0 16px}
+  summary{cursor:pointer;font-weight:600;padding:13px 0;font-size:14px;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"▸ ";color:var(--brand)}details[open] summary::before{content:"▾ "}
+  details .body{font-size:13.5px;color:#334155;padding-bottom:14px}
+  .h2sec{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:26px 0 4px}
+  footer{margin-top:30px;border-top:1px solid var(--line);padding-top:14px;color:var(--muted);font-size:12px}
+  @media(max-width:760px){.grid5{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body><div class="wrap">
+
+  <h1>🏛️ LLM Council — Verdict</h1>
+  <div class="sub">Design pressure-test · skill <code>dashboard-architect</code> · 5 consilieri + peer review + chairman · 2026-06-05 15:44</div>
+
+  <div class="q"><b>Întrebarea</b><br>Este designul skill-ului <code>dashboard-architect</code> (constructor de dashboard-uri HTML self-contained, predat participanților non-tehnici la workshop-urile AI BOOST) cel corect — și ce-l face foolproof, util și sigur de arătat unui client?</div>
+
+  <div class="verdict">
+    <h2>Unde converge consiliul · semnal de mare încredere</h2>
+    <ol>
+      <li><b>Auto-detect pe date e punctul de eșec #1, nu feature-ul</b> (4 din 5, independent). Eșecul e <i>încrezător și tăcut</i> — modelul citește greșit o cifră, omul o prezintă clientului fără s-o prindă.</li>
+      <li><b>Fix-ul cu cel mai mare leverage = un gate de confirmare a datelor, deținut de user, ÎNAINTE de build</b> — „Am citit: CTR 2,3% · CPC 1,4 lei · conversii 47. Corect? Ce lipsește?". (Cel mai votat la peer review.)</li>
+      <li><b>„Generic fără preset-uri" e prea neopinionat</b> pentru non-tehnici → soluția: <b>3 exemple de pornire</b> care pre-completează interviul (șine la suprafață, motor generic dedesubt).</li>
+      <li><b>SVG inline scris de mână = corect</b> — unanim. Moat-ul zero-rețea, shareable. Se păstrează.</li>
+      <li><b>Verificarea în browser confirmă randarea, nu corectitudinea matematică</b> (procente care se adună la 100, direcția delta-ei).</li>
+    </ol>
+
+    <h2>Unde se ceartă consiliul</h2>
+    <ul>
+      <li><b>Modul C (white-label):</b> Executorul → <i>taie-l de la workshop #1</i> (scope creep). Expansionistul → <i>e vârful de lance</i> (mini-agenție, cal troian SaaS). <b>Rezoluție:</b> orizonturi diferite — păstrează C ca premiu strategic, dar modul B e default-ul v1.</li>
+      <li><b>„Orice KPI" vs șine:</b> First Principles → taie ambiția; Expansionist → genericul = platformă. <b>Rezoluție:</b> cele 3 exemple-de-pornire dizolvă tensiunea.</li>
+    </ul>
+
+    <h2>Blind spots prinse abia la peer review</h2>
+    <ul>
+      <li><b>Răspunderea pe eroare</b> când dashboard-ul greșit ajunge la clientul final → disclaimer „cifre needitate — verifică înainte de trimitere" + poziționare ca <i>draft</i>.</li>
+      <li><b>Nicio corecție DUPĂ build</b> → editare în limbaj natural post-build („schimbă CPC în 1,2") + re-confirmare la schimbarea datelor.</li>
+      <li><b>Footgun-ul SAMPLE</b> → gardă + check pre-trimitere. · <b>Corectitudine pe mobil</b> (clienții deschid pe telefon). · <b>Buclă de feedback post-workshop</b> (câți chiar au livrat unul) — singura măsură reală.</li>
+    </ul>
+
+    <h2>Recomandarea</h2>
+    <p style="font-size:14.5px;margin:6px 0 0">Designul e <b>fundamental corect</b> (SVG inline, generic-cu-inteligență, 2 faze, self-contained) — dar nu e gata de client până nu adaugi <b>stratul de încredere</b>: (1) gate de confirmare a datelor, (2) self-check de matematică, (3) 3 exemple de pornire, (4) checklist „ce cifre îți trebuie", (5) gardă SAMPLE + disclaimer draft, (6) editare NL post-build. Modul C = viziune, nu v1.</p>
+
+    <div class="first">
+      <div class="lab">★ Singurul lucru de făcut primul</div>
+      <div class="big">Adaugă gate-ul de confirmare a datelor citite ca pas OBLIGATORIU între parsare și build. Apoi testează-l orb pe 5 screenshot-uri reale de la 5 oameni diferiți.</div>
+    </div>
+  </div>
+
+  <div class="h2sec">Cei 5 consilieri · poziția pe scurt</div>
+  <div class="grid5">
+    <div class="adv"><div class="name">Contrarianul</div><div class="take">Lipsește stratul de validare date + matematică. Eșec încrezător.</div></div>
+    <div class="adv"><div class="name">Prim-Principii</div><div class="take">Livrabilul e ÎNCREDEREA, nu fișierul. Gate deținut de user.</div></div>
+    <div class="adv"><div class="name">Expansionistul</div><div class="take">E un canal de distribuție. Promovează Modul C + librărie de template-uri.</div></div>
+    <div class="adv"><div class="name">Outsider-ul</div><div class="take">Mă blochez la „dă-mi datele". Vreau o listă + un exemplu + o verificare finală.</div></div>
+    <div class="adv"><div class="name">Executorul ★</div><div class="take">Confirmare vizibilă a datelor + 3 exemple de pornire. Testează orb pe 5 screenshot-uri.</div><div class="star">★ cel mai votat la peer review</div></div>
+  </div>
+
+  <table class="axes">
+    <tr><th>Axa</th><th>Verdictul consiliului</th></tr>
+    <tr><td>Auto-detect pe date</td><td><span class="pill clash">risc</span> punctul de eșec #1 — are nevoie de gate de confirmare</td></tr>
+    <tr><td>Generic, fără preset-uri</td><td><span class="pill clash">ajustează</span> adaugă 3 exemple de pornire ca șine</td></tr>
+    <tr><td>SVG inline scris de mână</td><td><span class="pill agree">păstrează</span> corect, unanim — moat-ul self-contained</td></tr>
+    <tr><td>Flux 2 faze + verificare</td><td><span class="pill agree">bun</span> dar verificarea trebuie să acopere și matematica</td></tr>
+    <tr><td>Modul C (white-label)</td><td><span class="pill clash">secvențiere</span> viziune strategică, nu prioritate v1</td></tr>
+  </table>
+
+  <div class="h2sec">Răspunsurile complete ale consilierilor</div>
+  <details><summary>Contrarianul</summary><div class="body">Auto-detect pe date e marketat ca feature, dar e cea mai mare capcană de reputație: participantul lipește screenshot din Ads Manager, modelul confundă CPA cu CPC, inventează un benchmark plauzibil, omul prezintă cifra greșită clientului LUI — eșuează încrezător. Unde e gate-ul „astea sunt cifrele tale, da/nu" înainte de build? „Verifică în browser cu screenshot" verifică că se randează, nu că e corect. „Generic fără preset-uri" + „o întrebare pe rând" = interviu de 25 min pentru cineva care voia rezultat în 3. SVG scris de mână: portabil la print, fragil la editare. Cea mai slabă parte: nu există strat de validare a datelor și a matematicii. Tăiați un mod de livrare din trei înainte să adăugați asta.</div></details>
+  <details><summary>Gânditorul de Prim-Principii</summary><div class="body">Pui întrebarea greșită. Livrabilul nu e fișierul HTML — e încrederea unui participant non-tehnic că poate produce ceva care nu-l face de râs. Designul optimizează artefactul, nu transferul de capacitate. Auto-detect e teatrul magic care devine punctul de eșec. „Generic fără preset-uri" — un începător nu vrea libertate, vrea o șină; depinde 100% de cum intervievează modelul în ziua aia = predai loterie. Cea mai slabă parte: verificarea făcută de Claude, nu de om; fără un gate de încredere deținut de USER, vinzi un pistol cu siguranța scoasă. Tai ambiția de „orice KPI"; adaugi 3 preset-uri opinionate ca șine + red-team propriu pe date înainte de build.</div></details>
+  <details><summary>Expansionistul</summary><div class="body">Skill-ul nu construiește dashboard-uri — construiește un canal de distribuție: fiecare participant devine un nod care arată outputul colegilor, șefilor, clienților. Modul C (white-label) e îngropat, dar e vârful de lance: participantul devine mini-agenție; Paul vinde infrastructura cu care alții fac bani. Auto-detect reușește dacă „screenshot din Ads Manager" e calea fericită. Generic = corect strategic (platformă, nu te închide), dar lipsește librăria comunitară de template-uri = efect de rețea. Cea mai slabă parte: PRIME DIRECTIVE e enunțată, nu instrumentată — întreabă „ce decizie iei cu asta?" și etichetează fiecare KPI. SVG inline = moat-ul shareable. Upside: cal troian pentru un SaaS AI Hackers.</div></details>
+  <details><summary>Outsider-ul (om obișnuit)</summary><div class="body">Mă blochez când îmi cere datele. „Lipește un tabel" — nu știu ce e un tabel, de unde îl iau, ce copiez. Dacă fac o poză și el ghicește greșit un număr, n-am de unde să-mi dau seama — asta mă sperie cel mai tare. „Merge cu orice" sună a libertate dar e gol; vreau „pune astea 5 cifre, în ordinea asta". Cel mai probabil renunț la „acum dă-mi datele" — se simte ca un examen. Cifrele inventate „de probă" mă încurcă: dacă uit să le schimb și trimit numere false? Mi-ar trebui: un exemplu complet gata, o listă clară de ce cifre îmi trebuie, o verificare finală „ești sigur că astea-s cifrele tale?", și o garanție vizibilă că nimic nu pleacă pe internet.</div></details>
+  <details><summary>Executorul ★</summary><div class="body">Auto-detect e cel mai mare punct de eșec. Non-tehnicul lipește un screenshot cu 4 KPI vizibile și 12 tăiate, sau un CSV cu virgulă zecimală. Luni: ia 5 screenshot-uri reale de la 5 oameni și rulează skill-ul orb. Fix-ul cu cel mai mare leverage e confirmarea vizibilă a datelor citite: „Am citit: CTR 2.3%, CPC 1.4 lei, conversii 47. Corect? Ce lipsește?". Nu preset-uri rigide, ci 3 exemple de pornire care pre-completează interviul. Taie modul C de la primul workshop. Lipsește: buton export/salvează + unde a fost salvat. SVG inline — corect, nu schimba.</div></details>
+
+  <div class="h2sec">Peer review (anonim · A=Contrarian B=Prim-Principii C=Expansionist D=Outsider E=Executor)</div>
+  <details><summary>Cele 3 review-uri pe scurt</summary><div class="body">
+  <b>Toate 3 au votat E (Executorul) cel mai tare</b> — singurul care convertește critica într-un mecanism testabil (stringul de confirmare + protocolul de test „luni, 5 screenshot-uri reale") și distinge fin „preset-uri rigide" de „3 exemple de pornire".<br><br>
+  <b>Toate 3 au numit C (Expansionistul) cel mai mare blind spot</b> — strălucit pe strategie, dar romanțează exact partea letală (auto-detect & SVG ca „magie/moat") și construiește efectul de rețea peste o fundație necontrolată; cifrele greșite nu sunt edge case, sunt riscul reputațional central.<br><br>
+  <b>Ce au ratat toate cinci:</b> (1) răspunderea pe eroare → disclaimer + poziționare ca draft; (2) calea de corecție DUPĂ build (editare în limbaj natural) + re-confirmare la editare; (3) corectitudinea pe mobil; (4) bucla de feedback post-workshop (câți chiar au livrat un dashboard).
+  </div></details>
+
+  <footer>Generat de <b>llm-council</b> (metodologie Andrej Karpathy) · evaluează <code>~/.claude/skills/dashboard-architect/</code> · transcript complet: <code>council-transcript-20260605-1544.md</code></footer>
+
+</div></body></html>
