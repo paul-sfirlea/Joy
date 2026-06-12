@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "location": "Mezcaleria Lupa, Cluj-Napoca",
+    "country": "Romania",
+    "currency": "RON",
+    "language": "ro",
+    "target_pour_cost_pct": 22,
+    "hidden_buffer_pct": 10,
+    "buffer_label": "spillage/waste",
+    "date": "2026-06-04"
+  },
+  "recipes": [
+    {
+      "name": "Vatra de Agave",
+      "family": "Sour / Daisy (linia Paloma)",
+      "concept": "Paloma reinventat: fum de lemn de măr peste agave și grapefruit roz.",
+      "story": "Vatra e cuptorul de pământ unde se coace inima de agave. Băutura aduce fumul acelei vetre în pahar, peste citrice vii — o reverență adusă mezcalului, construită pe Don Julio.",
+      "menu_description": "Don Julio Blanco îmbrățișează grapefruitul roz și o șoaptă de absint, peste sirop de agave afumat la lemn de măr — un Paloma reinventat, citric și învăluit în fum, cu o ramă de sare cu chili.",
+      "flavour_tag": "Afumat · Citric · Agave",
+      "hero_brand": "Don Julio Blanco",
+      "glass": "Rocks",
+      "ice": "Cub mare clar",
+      "garnish": "Roată de grapefruit roz deshidratată + jumătate de ramă de sare cu chili",
+      "method": [
+        "Afumă paharul rocks cu lemn de măr (smoking gun) și acoperă 10 secunde",
+        "Adaugă Don Julio, grapefruit, lime, sirop de agave afumat și Cointreau în shaker, cu gheață",
+        "Shake to mix ~15 secunde",
+        "Picură absintul în paharul afumat și rotește pentru a-l tapeta",
+        "Double strain peste un cub mare clar",
+        "Garnish and serve"
+      ],
+      "homemades": [
+        {
+          "name": "Sirop de agave afumat",
+          "method": "Agave 1:1 cu apă caldă; afumă cu lemn de măr la smoking gun ~10 min sub capac; odihnește, strecoară.",
+          "batch_yield_ml": 500,
+          "batch_cost": 18.0
+        }
+      ],
+      "ingredients": [
+        {"name": "Don Julio Blanco", "qty": 40, "unit": "ml", "container_size": 700, "container_unit": "ml", "container_cost": 230.0, "cost_estimated": true, "is_garnish": false},
+        {"name": "Suc de grapefruit roz", "qty": 25, "unit": "ml", "container_size": 1000, "container_unit": "ml", "container_cost": 14.0, "cost_estimated": true, "is_garnish": false},
+        {"name": "Suc de lime", "qty": 15, "unit": "ml", "container_size": 1000, "container_unit": "ml", "container_cost": 28.0, "cost_estimated": true, "is_garnish": false},
+        {"name": "Sirop de agave afumat", "qty": 12.5, "unit": "ml", "container_size": 500, "container_unit": "ml", "container_cost": 18.0, "cost_estimated": false, "is_garnish": false},
+        {"name": "Cointreau (non-Diageo)", "qty": 5, "unit": "ml", "container_size": 700, "container_unit": "ml", "container_cost": 130.0, "cost_estimated": true, "is_garnish": false},
+        {"name": "Absint", "qty": 2, "unit": "dash", "container_size": 700, "container_unit": "ml", "container_cost": 180.0, "cost_estimated": true, "is_garnish": false},
+        {"name": "Roată grapefruit deshidratată", "qty": 1, "unit": "each", "container_size": 1, "container_unit": "each", "container_cost": 1.5, "cost_estimated": false, "is_garnish": true},
+        {"name": "Ramă sare-chili", "qty": 1, "unit": "each", "container_size": 1, "container_unit": "each", "container_cost": 0.5, "cost_estimated": false, "is_garnish": true}
+      ],
+      "food_pairing": "Ceviche de dorada cu grapefruit roz, avocado și jalapeño — citricele fac ecou pairingului grapefruit-agave, iar jalapeño ridică fumul.",
+      "bartender_level": "advanced",
+      "techniques_used": ["shake", "smoking (glass)", "sirop afumat homemade"]
+    }
+  ]
+}

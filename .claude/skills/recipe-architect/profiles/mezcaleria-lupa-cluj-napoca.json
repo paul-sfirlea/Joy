@@ -1,0 +1,21 @@
+{
+  "location": "Mezcaleria Lupa, Cluj-Napoca",
+  "country": "Romania",
+  "city": "Cluj-Napoca",
+  "currency": "RON",
+  "language": "ro",
+  "venue_type": "agave cocktail bar",
+  "theme": "agave / fum / Mexic modern",
+  "bartender_level": "advanced",
+  "methods": ["build", "stir", "shake", "throw", "jigger"],
+  "techniques": ["infusion", "fat wash", "clarification-gelatine", "smoking", "super juice", "sous-vide"],
+  "equipment": ["smoking gun", "dehydrator", "scales", "centrifuge", "clear ice setup"],
+  "ice_formats": ["cubed", "large cube", "crushed", "clear"],
+  "glassware": ["rocks", "coupe", "highball", "tiki", "martini"],
+  "brands_diageo": ["Don Julio", "Casamigos", "Tanqueray", "Zacapa", "Bulleit", "Johnnie Walker"],
+  "brands_other": ["Cointreau", "Campari", "absinthe"],
+  "target_pour_cost_pct": 22,
+  "hidden_buffer_pct": 10,
+  "created": "2026-06-04",
+  "updated": "2026-06-04"
+}
