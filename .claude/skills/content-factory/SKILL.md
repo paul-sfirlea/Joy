@@ -97,9 +97,21 @@ Pentru fiecare rând din plan, generează postarea completă după formatul ei:
 Pentru fiecare postare, adaugă: **brief vizual** (1–2 fraze pentru
 designer/generator de imagini: subiect, stil, emoție, text pe vizual).
 
-### Mod 2.5 — QUALITY GATE (rulează automat pe fiecare postare, scor 0–10)
-Publici doar la **scor ≥ 8/10**. Sub 8 → rescrii singur o dată, apoi
-marchezi pentru review uman cu scorul și criteriile picate.
+### Mod 2.5 — QUALITY GATE ca BUCLĂ (objective / metric / boundary)
+Aceasta nu e o verificare unică — e o **buclă de auto-corecție** (metoda
+„write a loop": tu nu mai scrii fiecare postare, scrii bucla care le scrie).
+- **OBJECTIVE:** postare stop-scroll, specifică, care merită salvată/share-uită.
+- **METRIC:** scorul 0–10 de mai jos, dat de tine însuți fiecărui draft.
+- **BOUNDARY:** max **3 treceri** per postare; dacă tot nu atinge 8 după 3
+  rescrieri, oprește bucla și predă-o lui Magda cu scorul + criteriile picate.
+
+Cum rulezi bucla pentru FIECARE postare:
+1. generează draftul; 2. scorează-l pe cele 10 criterii (total /10);
+3. dacă < 8 → critică-ți draftul pe criteriile picate și rescrie; repetă
+   până la 8 sau până la 3 treceri; 4. afișează DOAR câștigătorii (≥8) +
+   scorul fiecăruia. Postările care n-au trecut merg într-o listă separată
+   „necesită Magda", niciodată în CSV automat.
+Criteriile de scor (1 punct fiecare):
 1. Hook: payoff/problemă în primele 12 cuvinte / 2 secunde?
 2. Specificitate: minim o cifră concretă, exemplu numit sau mini-caz?
    („3 clienți, 47 de zile" bate „mulți clienți, rezultate rapide")
@@ -147,6 +159,37 @@ CSV; numele fișierului = numele clientului + luna.
 - La finalul fiecărui batch, afișează: nr. postări generate, distribuția
   pe piloni, ce necesită review uman obligatoriu (tot ce e Social Proof
   și Comercial).
+
+## Mod 4 — BUCLA CARE ÎNVAȚĂ (firul de feedback din Publer)
+
+Diferența dintre o buclă care RULEAZĂ (face azi ce făcea ieri) și una care
+ÎNVAȚĂ (devine mai bună singură) e UN fir de feedback. Aici, firul = datele
+reale din Publer. Fără el, quality gate-ul ghicește ce e „bun"; cu el, știe.
+
+Ciclul lunar de învățare:
+1. Magda exportă din Publer analitica lunii (per postare: reach, saves,
+   shares, comentarii, profile-visits/DM — și, dacă există, lead-uri raportate
+   de client). Lipește exportul în Project-ul clientului.
+2. Tu calculezi, per postare: **save-rate** și **share-rate** (cele mai bune
+   semnale de „a meritat"). Marchează top 20% = CÂȘTIGĂTORI, bottom 20% =
+   PERDANȚI.
+3. **Reglează metrica:** ce tipare au câștigătorii (pilon, structură, tip de
+   hook, lungime, unghi din avatar)? Scrie 3 reguli noi de generare pentru
+   luna viitoare („cresc caruselele Educațional cu hook-întrebare; reduc
+   Entertainment; structura 6 a performat — o folosesc la Comercial").
+4. **Actualizează swipe file-ul** (vezi mai jos) cu câștigătorii + DE CE au
+   câștigat (din date, nu din impresie). Retrage structura cea mai slabă.
+5. Luna următoare, Mod 1 și Mod 2.5 folosesc regulile noi. Bucla s-a închis.
+
+REGULA DE AUR a învățării: optimizezi pentru **rezultatul clientului
+(lead-uri/DM/profile-visits), nu pentru volum sau like-uri**. 1000 de postări
+cu engagement plat = buclă care rulează degeaba. O buclă care învață spre
+lead-uri = compounding.
+
+Unde rămâne OMUL în buclă (din mailul AI Loop): tu (Virgil/Magda) alegeți
+OBJECTIVE (ce înseamnă „bun"), alegeți METRIC (saves vs lead-uri — judecată
+de business), trasați BOUNDARY (ce publică singur vs ce trece prin om).
+Munca de taste dispare; munca de judecată rămâne — și e a Magdei.
 
 ## Voice Card (per client, în Fișă — anti-uniformizare)
 
